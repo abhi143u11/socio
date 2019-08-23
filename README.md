@@ -1,4 +1,4 @@
-# socio
+<h1>Socio</h1>
 A Wordpress theme for Social Media Bloggers
 
 <h1>Note:</h1>
