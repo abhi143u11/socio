@@ -1,29 +1,13 @@
 
 </main>
-<footer class="footer background--dark">
+<footer class="footer background--light">
     <div class="container">
         <div class="row">
 
-            <div class="cta-block__wrapper col">
-                <div class="cta-block gradient-brand-color py-5">
-                    <div class="row">
-                        <div class="col-10 offset-1 d-md-flex justify-content-between align-items-center">
-                            <div class="cta__contet color--white">
-                                <h2 class="color--white">Priced to suit your business</h2>
-                                <p>Simple plans, no contract, no setup and hidden fees</p>
-                            </div>
-
-                            <div class="cta__button">
-                                <a href="index.html#0" class="btn btn-secondary">View Pricing Plans</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- CTA Block Wrapper -->
-
+          
             <div class="footer-content col-12 d-md-flex justify-content-between align-items-center">
                 <div class="footer__brand">
-                    <a class="footer-logo" href="index.html"><img src="js/logo-footer.svg" alt="Socio"></a>
+                    <a class="footer-logo" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_file_uri().'/assets/images/logo_transparent.png'; ?>" alt="Socio"></a>
 
                     <p class="mb-0">Socio is website theme for social media marketing business.</p>
                 </div>

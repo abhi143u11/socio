@@ -8,9 +8,9 @@ get_header();
 
             <div class="col-md-8 align-self-center text-center mt-7">
 
-                <h1 class="mb-3"><?php wp_title(); ?></h1>
+                <h1 class="mb-3"><?php wp_title(' '); ?></h1>
 
-                <p class="lead mb-5">This is the place where you can find the custom built shortcodes especially for this theme based on the components, already, described in the Documentation.</p>
+                <p class="lead mb-5">Recent Articles</p>
 
             </div>
 

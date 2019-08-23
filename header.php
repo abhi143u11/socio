@@ -16,7 +16,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container position-relative">
 
-                    <a class="navbar-brand" href="index.html"><img src="<?php echo get_theme_file_uri().'/assets/images/logo_transparent.png'; ?>" alt="Socio"></a>
+                    <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_file_uri().'/assets/images/logo_transparent.png'; ?>" alt="Socio"></a>
                     <button class="navbar-toggler border-0" type="button" data-toggle="offcanvas">
                         <i class="navbar-toggler__bar navbar-toggler__bar--top"></i>
                         <i class="navbar-toggler__bar navbar-toggler__bar--middle"></i>
