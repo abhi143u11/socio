@@ -1,6 +1,11 @@
 <div class="col-md-6 mb-5">
     <div class="post card h-100 p-0 border-0 shadow-sm">
-       <?php the_post_thumbnail('medium',['class' => 'card-img-top']); ?>
+       <?php 
+       if(has_post_thumbnail()){
+           the_post_thumbnail('medium',['class' => 'card-img-top']);
+       }
+       
+       ?>
         <div class="card-body">
             <p class="card-text mb-2"><small class="text-muted"><?php echo get_the_date(); ?></small>,<small class="text-muted"><?php the_category(' '); ?></small>,<small class="text-muted"><?php comments_number('No Comments'); ?></small></p>
             <a href="<?php the_permalink(); ?>" class="h4 card-title d-block mb-4"><?php the_title(); ?></a>
