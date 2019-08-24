@@ -7,9 +7,8 @@ Design Blog Page
 <h1>Note:</h1>
 
 Theme is currently under development
-
+<h2>*Completed Parts*</h2>
 <ul>
-<li><h2>*Completed Parts*</h2></li>
 <li>Layout Design</li>
 <li>Blog Posts</li>
 <li>Single Post</li>
@@ -20,9 +19,8 @@ Theme is currently under development
 <li>Attachment</li>
 </ul>
 
-
+<h2>*Pending Parts*</h2>
 <ul>
-<li><h2>*Pending Parts*</h2></li>
 <li>Logo From Customize</li>
 <li>Author Post Types</li>
 </ul>
