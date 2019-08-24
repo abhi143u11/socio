@@ -12,40 +12,46 @@ if (post_password_required())
 
     <div class="container">
         <div class="row row-grid justify-content-center">
-            <h2 class="section__title mb-4"><?php _e('Comments','socio'); ?></h2>
+            <h2 class="section__title mb-4"><?php _e('Comments', 'socio'); ?></h2>
             <?php foreach ($comments as $comment) { ?>
-               <div class="col-md-12">
+                <div class="col-md-12">
 
-                        <blockquote class="blockquote shadow">
-                          
+                    <blockquote class="blockquote shadow">
 
-                          <p><?php comment_text(); ?></p>
 
-                          <footer class="blockquote-footer d-flex align-items-center">
+                        <p><?php comment_text(); ?></p>
+
+                        <footer class="blockquote-footer d-flex align-items-center">
                             <div class="testimony__avatar d-inline-block mr-3">
-                              
-                              <?php echo get_avatar($comment,60,'','',['class' => 'rounded-circle']); ?>
+
+                                <?php echo get_avatar($comment, 60, '', '', ['class' => 'rounded-circle']); ?>
                             </div>
 
                             <div class="testimony__info d-inline-block">
 
-                              <span class="info-name d-block">  <?php comment_author(); ?></span>
-                              <span class="info-company d-block"><?php comment_date(); ?></span>
+                                <span class="info-name d-block">  <?php comment_author(); ?></span>
+                                <span class="info-company d-block"><?php comment_date(); ?></span>
                             </div>
 
-                          </footer>
-                        </blockquote>
+                        </footer>
+                    </blockquote>
 
-                      </div>
-              
-                
-                
+                </div>
 
-            <?php }
+
+
+
+                <?php
+            }
+
+            the_comments_pagination(array(
+                'prev_text' => '⇐ Previous',
+                'next_text' => 'Next ⇒'
+            ));
             ?>
-            
-<div class="col-lg-12 contact-form__wrapper p-2">
-    <?php 
+
+            <div class="col-lg-12 contact-form__wrapper p-2">
+                <?php
                 comment_form([
                     'comment_field' => '  <div class="col-sm-12 mb-3">
                           <div class="form-group">
@@ -66,17 +72,15 @@ if (post_password_required())
                             <input type="text" class="form-control" id="email" name="email" placeholder="contact@socio.com">
                           </div>
                         </div>',
-                        
                     ],
                     'class_submit' => 'btn btn-primary',
-                    'label_submit' => __('Submit Comment','socio'),
-                    'title_reply' => __('Leave a Comment','socio')
+                    'label_submit' => __('Submit Comment', 'socio'),
+                    'title_reply' => __('Leave a Comment', 'socio')
                 ]);
-    
-    ?>
-    
-    
-                  </div>
+                ?>
+
+
+            </div>
         </div>
     </div>
 </section>
