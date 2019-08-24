@@ -7,16 +7,17 @@ Design Blog Page
 <h1>Note:</h1>
 Theme is currently under development
 Completed Parts
-Layout Desgin
+Layout Design
 Blog Posts
 Single Post
+Pages
+Comments Section
 
 *Pending
 
-Logo From Customise
-Comments Section
+Logo From Customize
+
 Author 
 Archive
 Date
 Post Types
-Pages
