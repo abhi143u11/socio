@@ -1,6 +1,6 @@
 
 </main>
-<footer class="footer background--light">
+<footer class="footer background--dark">
     <div class="container">
         <div class="row">
 
