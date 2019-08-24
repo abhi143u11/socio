@@ -2,12 +2,12 @@
 get_header();
 ?>
 
-    <section class="section section-post-entry gradient-light--upright">
-      <div class="container">
+    <section class="section section-post-entry">
+      <div class="container contact__wrapper">
 
         <div class="row row-grid justify-content-center">
 
-          <div class="entry-header col-md-10 col-lg-8 text-center mt-6 mb-5">
+          <div class="entry-header col-md-10 col-lg-8 text-center mt-6 mb-5 ">
           <?php
                             if (have_posts()) {
                                 while (have_posts()) {
@@ -59,7 +59,7 @@ get_header();
             </div>
         </div>
       </div>
-    </section> <!-- END Section Post Entry -->
+     </section>
        <?php
        if(comments_open() || get_comments_number()){
             comments_template();
