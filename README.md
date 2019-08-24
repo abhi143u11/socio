@@ -12,12 +12,12 @@ Blog Posts
 Single Post
 Pages
 Comments Section
+Archive
+Date
+Attachment
 
 *Pending
 
 Logo From Customize
 
-Author 
-Archive
-Date
-Post Types
+Author Post Types
