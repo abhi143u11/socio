@@ -6,8 +6,8 @@ get_header();
     <div class="container contact__wrapper">
 
         <div class="row row-grid justify-content-center">
-
-            <div class="entry-header col-md-10 col-lg-8 text-center mt-6 mb-5 ">
+        
+            <div class="entry-header col-md-10 col-lg-8 text-left mt-6 mb-5 ">
                 <?php
                 if (have_posts()) {
                     while (have_posts()) {
@@ -16,7 +16,7 @@ get_header();
                         $author_ID = $post->post_author;
                         $author_URL = get_author_posts_url($author_ID);
                         ?>
-                        <h1 class="mb-4"><?php the_title(); ?></h1>
+                        <h1 class="mb-4 text-center"><?php the_title(); ?></h1>
 
                         <div class="text-center">
                             <small class="text-muted mr-3"><?php echo get_the_date(); ?></small>
@@ -30,8 +30,8 @@ get_header();
                             </div>
                         </div>
 
-                    </div>
-
+                   
+            
                     <div class="post-thumbnail col-lg-10 mb-6">
                         <?php
                         if (has_post_thumbnail()) {
@@ -56,7 +56,9 @@ get_header();
                         <?php next_post_link(); ?>
                     </div>
                 </div>
+            <?php get_sidebar(); ?>
             </div>
+    </div>
         </section>
 
         <section class="section related-posts gradient-light--upright">
@@ -130,6 +132,7 @@ get_header();
         ?>
         <?php
     }
+   
 }
 get_footer();
 ?>

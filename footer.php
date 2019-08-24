@@ -12,28 +12,21 @@
                     <p class="mb-0">Socio is website theme for social media marketing business.</p>
                 </div>
 
-                <div class="footer__menu">
-                    <ul class="footer-nav nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="pricing.html">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog-full-width.html">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                        <li class="nav-item nav-item--btn">
-                            <a href="signup.html" class="btn btn-primary btn-sm btn--has-shadow mt-3 mt-md-0">Sign up</a>
-                        </li>
-                    </ul>
-                </div>
+               
+                       <?php
+                        if (has_nav_menu('primary')) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'footer',
+                                'depth' => 0, // 1 = no dropdowns, 2 = with dropdowns.
+                                'container' => 'div',
+                                'container_class' => 'footer__menu',
+                                'container_id' => false,
+                                'menu_class' => 'footer-nav nav',
+                                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                                'walker' => new WP_Bootstrap_Navwalker(),
+                            ));
+                        }
+                        ?>
             </div> <!-- Footer Content -->
 
             <div class="col-12">
