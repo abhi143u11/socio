@@ -5,19 +5,22 @@ Design Blog Page
 ![](screenshot.png)
 
 <h1>Note:</h1>
+
 Theme is currently under development
-Completed Parts
-Layout Design
-Blog Posts
-Single Post
-Pages
-Comments Section
-Archive
-Date
-Attachment
+*Completed Parts
+<ul>
+<li>Layout Design</li>
+<li>Blog Posts</li>
+<li>Single Post</li>
+<li>Pages</li>
+<li>Comments Section</li>
+<li>Archive</li>
+<li>Date</li>
+<li>Attachment</li>
+</ul>
 
 *Pending
-
-Logo From Customize
-
-Author Post Types
+<ul>
+<li>Logo From Customize</li>
+<li>Author Post Types</li>
+</ul>
