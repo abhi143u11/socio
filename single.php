@@ -18,7 +18,7 @@ get_header();
                         ?>
                         <h1 class="mb-4 text-center"><?php the_title(); ?></h1>
 
-                        <div class="text-center">
+                        <div class="text-center pb-4">
                             <small class="text-muted mr-3"><?php echo get_the_date(); ?></small>
 
                             <div class="d-inline-block mr-3">
@@ -32,7 +32,7 @@ get_header();
 
                    
             
-                    <div class="post-thumbnail col-lg-10 mb-6">
+                    <div class="post-thumbnail col-lg-12 mb-6">
                         <?php
                         if (has_post_thumbnail()) {
                             the_post_thumbnail('full', ['class' => 'img-fluid rounded']);
@@ -40,18 +40,18 @@ get_header();
                         ?>
                     </div>
 
-                    <div class="entry-content col-md-10 col-lg-8">
+                    <div class="entry-content col-md-12 col-lg-12">
                         <?php
                         the_content();
                         //For Page Breaks 
                         wp_link_pages();
                         ?>
                     </div>
-                    <div class="entry-content col-md-10 col-lg-8">
+                    <div class="entry-content col-md-12 col-lg-12">
                         <?php the_tags(); ?>
 
                     </div>
-                    <div class="entry-footer col-md-10 col-lg-8"> 
+                    <div class="entry-footer col-md-12 col-lg-12"> 
                         <?php previous_post_link(); ?>|
                         <?php next_post_link(); ?>
                     </div>

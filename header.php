@@ -11,12 +11,27 @@
     </head>
 
     <body <?php body_class(); ?>>
+        
         <header class="header">
+            
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container position-relative">
 
-                    <a class="navbar-brand" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_file_uri().'/assets/images/logo_transparent.png'; ?>" alt="Socio"></a>
+
+                    <?php
+                    if (has_custom_logo()) {
+                        the_custom_logo();
+                    } else {
+                        ?>
+
+                    <a href="<?php echo home_url(); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
+
+                    <?php }
+                    ?>
+
+
+
                     <button class="navbar-toggler border-0" type="button" data-toggle="offcanvas">
                         <i class="navbar-toggler__bar navbar-toggler__bar--top"></i>
                         <i class="navbar-toggler__bar navbar-toggler__bar--middle"></i>
@@ -38,8 +53,8 @@
                             ));
                         }
                         ?>
-                        
-                      
+
+
                     </div>
 
                 </div>

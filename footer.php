@@ -4,29 +4,38 @@
     <div class="container">
         <div class="row">
 
-          
+
             <div class="footer-content col-12 d-md-flex justify-content-between align-items-center">
                 <div class="footer__brand">
-                    <a class="footer-logo" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_theme_file_uri().'/assets/images/logo_transparent.png'; ?>" alt="Socio"></a>
+                    <?php
+                    if (has_custom_logo()) {
+                        the_custom_logo();
+                    } else {
+                        ?>
+
+                        <a href="<?php echo home_url(); ?>" class="footer-logo"><?php bloginfo('name'); ?></a>
+
+                    <?php }
+                    ?>
 
                     <p class="mb-0">Socio is website theme for social media marketing business.</p>
                 </div>
 
-               
-                       <?php
-                        if (has_nav_menu('primary')) {
-                            wp_nav_menu(array(
-                                'theme_location' => 'footer',
-                                'depth' => 0, // 1 = no dropdowns, 2 = with dropdowns.
-                                'container' => 'div',
-                                'container_class' => 'footer__menu',
-                                'container_id' => false,
-                                'menu_class' => 'footer-nav nav',
-                                'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker' => new WP_Bootstrap_Navwalker(),
-                            ));
-                        }
-                        ?>
+
+                <?php
+                if (has_nav_menu('primary')) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'footer',
+                        'depth' => 0, // 1 = no dropdowns, 2 = with dropdowns.
+                        'container' => 'div',
+                        'container_class' => 'footer__menu',
+                        'container_id' => false,
+                        'menu_class' => 'footer-nav nav',
+                        'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+                        'walker' => new WP_Bootstrap_Navwalker(),
+                    ));
+                }
+                ?>
             </div> <!-- Footer Content -->
 
             <div class="col-12">
@@ -36,11 +45,24 @@
                     </div>
 
                     <ul class="social-icons ml-auto mb-0">
-                        <li><a href="index.html#0"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="index.html#0"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="index.html#0"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="index.html#0"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="index.html#0"><i class="fab fa-pinterest-p"></i></a></li>
+                        <?php if (get_theme_mod('so_facebook_handle')) { ?>
+                            <li><a href="https://facebook.com/<?php echo get_theme_mod('so_facebook_handle'); ?>"><i class="fab fa-facebook-f"></i></a></li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('so_twitter_handle')) { ?>
+                            <li><a href="https://twitter.com/<?php echo get_theme_mod('so_twitter_handle'); ?>"><i class="fab fa-twitter"></i></a></li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('so_instagram_handle')) { ?>
+                            <li><a href="https://instagram.com/<?php echo get_theme_mod('so_instagram_handle'); ?>"><i class="fab fa-instagram"></i></a></li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('so_linkedin_handle')) { ?>
+                            <li><a href="https://inkedin.com/<?php echo get_theme_mod('so_linkedin_handle'); ?>"><i class="fab fa-linkedin"></i></a></li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('so_email_handle')) { ?>
+                            <li><a href="mailto:<?php echo get_theme_mod('so_email_handle'); ?>"><i class="fab fa-mail-reply"></i></a></li>
+                        <?php } ?>
+                        <?php if (get_theme_mod('so_whatsapp_handle')) { ?>
+                            <li><a href="https://wa.me/<?php echo get_theme_mod('so_whatsapp_handle'); ?>"><i class="fab fa-whatsapp"></i></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>
