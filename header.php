@@ -7,13 +7,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <?php wp_head(); ?>
+        <style type="text/css">
+<?php if (get_theme_mod('so_background_handle')) { ?>
+           
+                .gradient-light--lean-right {
+                    background-image: url(<?php echo get_theme_mod('so_background_handle'); ?>);
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                }
+          
+<?php } else { ?>
+                .gradient-light--lean-right {
+                    background-image: url(<?php echo get_template_directory_uri() ?>/assets/images/background.png);
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                }
+<?php } ?>
+        </style>
 
     </head>
 
     <body <?php body_class(); ?>>
-        
+
         <header class="header">
-            
+
 
             <nav class="navbar navbar-expand-lg">
                 <div class="container position-relative">
@@ -25,7 +42,7 @@
                     } else {
                         ?>
 
-                    <a href="<?php echo home_url(); ?>" class="navbar-brand"><?php bloginfo('name'); ?></a>
+                        <a href="<?php echo home_url(); ?>" class="navbar-brand"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" ></a>
 
                     <?php }
                     ?>
@@ -43,7 +60,7 @@
                         if (has_nav_menu('primary')) {
                             wp_nav_menu(array(
                                 'theme_location' => 'primary',
-                                'depth' => 4, // 1 = no dropdowns, 2 = with dropdowns.
+                                'depth' => 2, // 1 = no dropdowns, 2 = with dropdowns.
                                 'container' => false,
                                 'container_class' => false,
                                 'container_id' => false,

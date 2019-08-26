@@ -13,7 +13,7 @@
                     } else {
                         ?>
 
-                        <a href="<?php echo home_url(); ?>" class="footer-logo"><?php bloginfo('name'); ?></a>
+                        <a href="<?php echo home_url(); ?>" class="footer-logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" ></a>
 
                     <?php }
                     ?>
@@ -41,7 +41,7 @@
             <div class="col-12">
                 <div class="footer-copyright-column d-md-flex justify-content-between align-items-center">
                     <div class="copyright">
-                        <p>©2019 - Socio. All rights reserved.</p>
+                        <p>©2019 - <a href="<?php echo get_bloginfo('url'); ?>" target="_blank"><?php echo get_bloginfo(); ?></a>. All rights reserved.</p>
                     </div>
 
                     <ul class="social-icons ml-auto mb-0">

@@ -5,7 +5,7 @@ function so_social_customizer($wp_customize) {
 
 
     $wp_customize->add_section('so_social_setion', [
-        'title' => __('Socio Social Settings', 'socio'),
+        'title' => __('Socio Settings', 'socio'),
         'priority' => 30
     ]);
     $wp_customize->add_setting('so_facebook_handle', [
@@ -16,7 +16,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Facebook url', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_facebook_handle',
-        'priority' => 1,
+        'priority' => 2,
         'type' => 'text'
             )
     ));
@@ -33,7 +33,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Twitter url', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_twitter_handle',
-        'priority' => 1,
+        'priority' => 3,
         'type' => 'text'
             )
     ));
@@ -50,7 +50,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Instagram url', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_instagram_handle',
-        'priority' => 1,
+        'priority' => 4,
         'type' => 'text'
             )
     ));
@@ -66,7 +66,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Linkedin url', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_linkedin_handle',
-        'priority' => 1,
+        'priority' => 5,
         'type' => 'text'
             )
     ));
@@ -82,7 +82,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Email', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_email_handle',
-        'priority' => 1,
+        'priority' => 6,
         'type' => 'email'
             )
     ));
@@ -98,7 +98,7 @@ function so_social_customizer($wp_customize) {
         'label' => __('Whatsapp No With Country Code', 'socio'),
         'section' => 'so_social_setion',
         'settings' => 'so_whatsapp_handle',
-        'priority' => 1,
+        'priority' => 7,
         'type' => 'number'
             )
     ));

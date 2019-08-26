@@ -3,7 +3,10 @@
        <?php 
        if(has_post_thumbnail()){
            the_post_thumbnail('medium',['class' => 'card-img-top']);
-       }
+       }else{ ?>
+        <img src="http://via.placeholder.com/350x200" width="350" height="200" class="card-img-top">
+      <?php
+      }
        
        ?>
         <div class="card-body">

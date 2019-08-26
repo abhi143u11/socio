@@ -14,51 +14,57 @@ get_header();
 
             </div>
 
-        </div> 
+        </div>
     </div>
 </section>
-<section class="section section-posts gradient-light--upright">
-    <div class="container">
-        <div class="row row-grid justify-content-center">
+<div class="sections__wrapper">
+    <div id="blog-1">
+        <section class="section section-posts gradient-light--upright">
+            <div class="container">
+                <div class="row row-grid justify-content-center">
 
-            <div class="col-lg-12">
+                    <div class="col-lg-12">
 
-                <div class="row">
-
-                    <div class="posts__wrapper col-lg-8 mb-5 mb-lg-0">
                         <div class="row">
 
-                            <?php
-                            if (have_posts()) {
-                                while (have_posts()) {
-                                    the_post();
+                            <div class="posts__wrapper col-lg-8 mb-5 mb-lg-0">
+                                <div class="row">
 
-                                    get_template_part('partials/post/content-excerpt');
-                                }
-                            }
-                            ?>
+                                    <?php
+                                    if (have_posts()) {
+                                        while (have_posts()) {
+                                            the_post();
 
-                        </div> <!-- inner nested row -->
-                    </div> <!-- END Posts Wrapper -->
+                                            get_template_part('partials/post/content-excerpt');
+                                        }
+                                    }
+                                    ?>
 
-                    <?php get_sidebar(); ?>
+                                </div> <!-- inner nested row -->
+                            </div> <!-- END Posts Wrapper -->
 
-                </div> <!-- Nested row -->
+                            <?php get_sidebar(); ?>
+
+                        </div> <!-- Nested row -->
+                    </div>
+
+                    <nav class="mt-4" aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item">
+                                <?php previous_posts_link('<div class="page-link"><small><i class="fas fa-chevron-left"></i> Previous</small></div>'); ?>
+                            </li>
+                            <li class="page-item">
+                                <?php next_posts_link('<div class="page-link"><small>Next <i class="fas fa-chevron-right"></i></small></div>'); ?>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
             </div>
+        </section>
+    </div>
+</div>
 
-            <nav class="mt-4" aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                        <?php previous_posts_link('<div class="page-link"><small><i class="fas fa-chevron-left"></i> Previous</small></div>'); ?>
-                    </li>
-                    <li class="page-item">
-                        <?php next_posts_link('<div class="page-link"><small>Next <i class="fas fa-chevron-right"></i></small></div>'); ?>
-                    </li>
-                </ul>
-            </nav>
-
-        </div></div>
-</section>
 <?php
 get_footer();
 ?>
